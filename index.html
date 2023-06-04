@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023년 버킷리스트</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+        * {
+            font-family: 'Jua', sans-serif;
+        }
+
+        .title {
+            color: mintcream;
+            background-color: tomato;
+            font-size: 24px;
+            padding: 4px 14px;
+            border: 8px;
+        }
+
+        .bg {
+            width: 360px;
+            background-image:
+                url("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20160219_286%2Fsun147500_1455887066150vBuD4_JPEG%2F%25BA%25A2%25B2%25C9_%25BA%25BD%25B2%25C9_%25B9%25E8%25B0%25E6%25C8%25AD%25B8%25E93.jpg&type=sc960_832");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .msg {
+            font-weight: bold;
+        }
+
+        .bucket {
+            width: 160px;
+            height: 160px;
+        }
+
+        .img1 {
+            background-image:
+                url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bucket-red.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .img2 {
+            background-image:
+                url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bucket-lightred.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        button {
+            border: none;
+            background: none;
+        }
+
+        button.bucket {
+            transition: all 0.3s ease;
+        }
+
+        button.bucket:hover {
+            transform: scale(1.1);
+        }
+    </style>
+    <link rel="stylesheet" type="text/css"
+        href="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/sparta-bucket2.css">
+</head>
+
+<body class="bg center">
+    <h1 class="title-t3">2023년 하고싶은 것들</h1>
+    <p class="msg">이룰 수 있는 것들만 쓰기 !</p>
+    <div class="row flex-row wrap">
+        <button class="bucket img1-t5 center">건강하기</button>
+        <button class="bucket img2-t5 done center">부모님 용돈 드리기</button>
+        <button class="bucket img2-t5 center">대학가기</button>
+        <button class="bucket img1-t5 center">친구들이랑 여행가기</button>
+        <button class="bucket img1-t5 center">게임 줄이기</button>
+        <button class="bucket img2-t5 center">운동하기</button>
+        <button class="bucket img2-t5 center">일주일에 한 번 독서하기</button>
+        <button class="bucket img1-t5 center">착해지기</button>
+    </div>
+    <script>
+        const buttons = document.querySelectorAll('.bucket'); // 버튼 요소들을 모두 선택합니다.
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('done'); // 해당 버튼의 클래스에서 'done' 클래스를 추가하거나 제거합니다.
+            });
+        });
+    </script>
+</body>
+
+</html>
